@@ -1,3 +1,3 @@
 module.exports = (req, res) => {
-    return res.json({"ok": true})
+    return res.render('main/index')
 }
