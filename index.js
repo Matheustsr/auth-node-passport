@@ -5,6 +5,7 @@ const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
 const mongoose = require('mongoose')
 const passport = require('passport')
+const session = require('express-session')
 const app = express()
 
 //Basic strategy
@@ -15,8 +16,10 @@ const app = express()
 app.use(morgan('dev'))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+app.use(methodOverride('_method'))
+app.use(session({ secret: 'KAHF%#@$@!sdWE206', resave: false, saveUninitialized: true})) //secret
 app.use(passport.initialize()) // init passport 
-
+app.use(passport.session)
 app.set('view engine', 'pug') // use pug
 app.set('views', path.join(__dirname, 'src/view')) // set templates folder
 

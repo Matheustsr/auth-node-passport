@@ -15,7 +15,7 @@ module.exports = (req, res) => {
         password: password,
     })
     .then((user) => {
-      return res.redirect("/");
+      return res.redirect("/users");
     })
     .catch((error) => {
       console.log(error);
