@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -14,10 +15,14 @@
     "express-session": "^1.17.2",
     "method-override": "^3.0.0",
     "mongoose": "^5.12.14",
+    "mongoose-type-email": "^1.1.2",
     "morgan": "^1.10.0",
     "passport": "^0.4.1",
     "passport-http": "^0.3.0",
     "passport-local": "^1.0.0",
     "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
