@@ -1,11 +1,12 @@
 const path = require('path')
 const express = require('express')
-const morgan = require('morgan')
 const bodyParser = require('body-parser')
+const morgan = require('morgan')
 const methodOverride = require('method-override')
 const mongoose = require('mongoose')
-const passport = require('passport')
 const session = require('express-session')
+const passport = require('passport')
+
 const app = express()
 
 //Basic strategy
